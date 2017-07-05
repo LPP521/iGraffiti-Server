@@ -7,7 +7,7 @@ import Image
 import os
 from . import database as db
 
-PASSWORD="ilordhalo@me.com"
+PASSWORD=""
 @csrf_exempt
 def paste_image(request):
     name=request.POST.get('name')
