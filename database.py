@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 import MySQLdb
 import os
-username='root'
-password='PI*32767*i*e'
+username=''
+password=''
 def connect(dbname,sqlstring,procedure=0):
     db=MySQLdb.connect(host="localhost", user=username, passwd=password, db=dbname,charset="utf8")
     #c=db.cursor()
