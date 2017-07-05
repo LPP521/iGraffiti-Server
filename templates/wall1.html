@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<link href="http://114.215.124.196/static/wall1.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="center">
+			<p id="p_title">
+				WALL1
+			</p>
+			<img src="http://114.215.124.196/static/wall1.jpg" />
+			<br>
+			<br>
+			<p id="p_addimage">
+				You can paste a picture in this wall
+			</p>
+			<form method="POST" enctype="multipart/form-data" action="">{% csrf_token %}
+				<input type="file" name="pic" style="width:120px;">
+				<br>
+				x:<input type="string" name="x_position" style="width:50px;">
+				<br>
+				y:<input type="string" name="y_position" style="width:50px;">
+				<br>
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+	{% ifequal ans "error" %}
+	<script type="text/javascript">
+	alert("ERROR!");
+	location.reload();
+	</script>
+	{% endifequal %}
+</html>

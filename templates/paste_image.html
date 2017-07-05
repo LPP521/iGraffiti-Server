@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head></head><body>
+                    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+                    <input type="file" name="pic" />
+                    <br/>
+                    <input type="string" name="name" />
+                    <br/>
+                    <input type="string" name="pwd" />
+                    <br/>
+                    <input type="submit" />
+                    </form>
+			ans:{{ ans }}
+                    </body></html>
